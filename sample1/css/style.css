@@ -234,7 +234,7 @@ header {
     left: 0;
     background: white;
     min-width: 250px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
     border-radius: 8px;
     opacity: 0;
     visibility: hidden;
@@ -245,9 +245,27 @@ header {
     flex-direction: column;
     padding: 0.5rem 0;
 }
+.dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: var(--clr-dark);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #f1f1f1;
+    transition: var(--transition);
+}
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+.dropdown-menu a:hover {
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    padding-left: 1.8rem;
+}
 .dropdown-wrapper:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 .mega-col:first-child .mega-item:hover, .mega-col:first-child .mega-item.active {
     background: var(--clr-white);
