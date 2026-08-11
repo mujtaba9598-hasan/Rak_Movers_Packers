@@ -676,6 +676,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .floating-actions { display: none; }
+    .top-bar {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0.5rem 0.75rem;
+        background: #10252d;
+        color: #fff;
+        font-size: 0.78rem;
+    }
+    .top-bar a { color: #fff; text-decoration: none; }
+    header { top: 42px; }
     .section { padding: 4rem 1.25rem; }
     .container { width: 100%; }
     [style*="min-width: 350px"],

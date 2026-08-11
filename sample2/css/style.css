@@ -525,6 +525,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .floating-actions { display: none; }
+    .top-bar {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0.5rem 0.75rem;
+        background: var(--bg-dark);
+        color: #fff;
+        font-size: 0.78rem;
+    }
+    .top-bar a { color: #fff; text-decoration: none; }
+    header { margin-top: 38px; }
     .section { padding: 3.5rem 1.25rem; }
     .container { width: 100%; }
     body > main > div[style*="padding: 150px"],
