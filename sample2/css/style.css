@@ -389,7 +389,7 @@ footer {
 }
 @keyframes driveOut {
     0% { left: 70px; }
-    100% { left: 300px; }
+    100% { left: 100vw; }
 }
 
 @media (max-width: 992px) {
