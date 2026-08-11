@@ -100,16 +100,7 @@ Please let me know the quote and availability.`;
         });
     }
 
-    // 5. Mobile Menu Toggle
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-        });
-    }
-
-    // 6. Mobile Dropdown Toggle
+    // 5. Mobile Dropdown Toggle
     const dropdownWrapper = document.querySelector('.dropdown-wrapper > a');
     const dropdownMenu = document.querySelector('.dropdown-menu');
     if (dropdownWrapper && dropdownMenu && window.innerWidth <= 992) {

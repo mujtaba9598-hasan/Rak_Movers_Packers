@@ -12,7 +12,7 @@
     <!-- Open Graph for WhatsApp -->
     <meta property="og:image" content="assets/hero_bg.png">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=map-20260811">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
             <span><i class="fa-solid fa-phone"></i> <a href="tel:+971501498707">050 149 8707</a></span>
         </div>
         <a href="index.html" class="logo"><img src="assets/logo.png" alt="RAK Movers"></a>
-            <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-toggle" id="mobile-menu" role="button" tabindex="0" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('nav-active')"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -130,6 +130,21 @@
         </div>
     </section>
 
+    <!-- GOOGLE MAP -->
+    <section class="section map-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span>Our Location</span>
+                <h2>Find RAK Movers and Packers</h2>
+                <p>Visit our Ras Al Khaimah location or open the map for directions.</p>
+            </div>
+            <div class="map-frame reveal">
+                <iframe src="https://www.google.com/maps?q=25.79825146304752,55.96855651479578&amp;z=15&amp;output=embed" title="RAK Movers and Packers location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <div class="map-actions reveal"><a href="https://www.google.com/maps?q=25.79825146304752,55.96855651479578" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> Open in Google Maps</a></div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -139,7 +154,7 @@
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">RAK Movers and Packers provides trusted, stress-free moving services with professional care and 24/7 availability across the UAE.</p>
                     <div style="display: flex; gap: 1rem;">
                         <a href="https://wa.me/971557385338" style="color: white; font-size: 1.5rem; transition: 0.3s;"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#" style="color: white; font-size: 1.5rem; transition: 0.3s;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://facebook.com/share/1adsKZ9XUH/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="RAK Movers and Packers on Facebook" style="color: white; font-size: 1.5rem; transition: 0.3s;"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#" style="color: white; font-size: 1.5rem; transition: 0.3s;"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -180,12 +195,12 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 RAK Movers and Packers. All Rights Reserved.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Developed by <span style="color: var(--accent-cyan); font-weight: 600;">Quartermasters F.Z.C</span><br><a href="tel:+971527529598" style="color: var(--accent-cyan); text-decoration: none; display: inline-block; margin-top: 5px;">+971 52 7529598</a></p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem;">Developed by <a href="https://wa.me/971527529598" target="_blank" rel="noopener" style="color: var(--accent-cyan); font-weight: 600; text-decoration: none;">Quartermasters F.Z.C</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=mobile3-20260811"></script>
     </main>
 </body>
 </html>

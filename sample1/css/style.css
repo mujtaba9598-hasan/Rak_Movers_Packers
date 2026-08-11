@@ -434,6 +434,26 @@ header {
     margin-bottom: 1rem;
 }
 
+.about-services .section-header {
+    margin-bottom: 3.5rem;
+}
+
+.about-services .service-card {
+    padding: 0;
+}
+
+.about-services .service-content {
+    padding: 2.25rem 2rem;
+}
+
+.about-services .service-icon {
+    margin: 0 auto 1.5rem;
+}
+
+.about-services .service-title {
+    text-align: center;
+}
+
 /* --- Forms --- */
 .form-group {
     margin-bottom: 1.5rem;
@@ -460,6 +480,12 @@ textarea.form-control {
 }
 
 /* --- Footer --- */
+.map-section { background: #f4f7f6; }
+.map-section .section-header p { max-width: 620px; margin: 0 auto; }
+.map-frame { width: 100%; height: 430px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e2e8ee; }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.map-actions { text-align: center; margin-top: 2rem; }
+
 footer {
     background: var(--clr-dark);
     color: var(--clr-white);
@@ -524,9 +550,10 @@ footer {
 
 @media (max-width: 992px) {
     .nav-links { 
+        display: none;
         position: fixed;
         top: 80px;
-        left: -100%;
+        left: 0;
         width: 100%;
         height: calc(100vh - 80px);
         background: var(--clr-white);
@@ -537,7 +564,7 @@ footer {
         overflow-y: auto;
     }
     .nav-links.nav-active {
-        left: 0;
+        display: flex;
     }
     .nav-links > li {
         width: 100%;
@@ -564,6 +591,36 @@ footer {
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
+    html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+    .section { padding: 4rem 1.25rem; }
+    .container { width: 100%; }
+    [style*="min-width: 350px"],
+    [style*="min-width: 300px"] {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 2rem !important;
+    }
+    [style*="grid-template-columns: 1fr 1fr"] > .reveal:last-child {
+        padding: 1.5rem !important;
+    }
+    .hero { min-height: 100svh; height: auto; padding: 8rem 1.25rem 4rem; }
+    .hero-content { width: 100%; }
+    .hero-text h1 { font-size: 2.35rem; }
+    .hero-text p { font-size: 1rem; }
+    .hero-badges { align-items: stretch; }
+    .hero-badges .badge { justify-content: center; text-align: center; }
+    .btn { max-width: 100%; white-space: normal; text-align: center; }
+    .service-card { width: 100%; }
+    .service-img { height: 220px; }
+    img { max-width: 100%; height: auto; }
+    .footer-logo { width: 150px; height: auto; }
+    .floating-actions { right: 14px; bottom: 18px; }
+    .float-btn { width: 50px; height: 50px; }
+    .map-frame { height: 320px; border-radius: 12px; }
+    .map-actions .btn { width: 100%; }
     .footer-grid { grid-template-columns: 1fr; }
     .hero-badges { flex-direction: column; align-items: flex-start; }
 }

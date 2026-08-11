@@ -318,6 +318,14 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* FOOTER */
+.map-section { background: var(--bg-dark); }
+.map-section .section-header { text-align: center; }
+.map-section .section-header span { color: var(--accent-cyan); }
+.map-section .section-header p { max-width: 620px; margin: 0 auto; color: var(--text-secondary); }
+.map-frame { width: 100%; height: 430px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,229,255,0.25); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+.map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.map-actions { text-align: center; margin-top: 2rem; }
+
 footer {
     background: var(--bg-surface);
     padding: 4rem 4rem 2rem;
@@ -439,12 +447,31 @@ footer {
         width: 100%;
         background: var(--bg-surface);
         padding: 1rem;
+        z-index: 1100;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
+    .nav-links.nav-active { display: flex; }
     .menu-toggle {
         display: block;
         color: white;
         font-size: 1.5rem;
         cursor: pointer;
+    }
+    .logo {
+        width: 145px;
+        height: 58px;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        background: #fff;
+    }
+    .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transform: scale(1.35);
+        transform-origin: center 57%;
     }
     main {
         margin-left: 0;
@@ -463,4 +490,33 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
+    .section { padding: 4rem 1.25rem; }
+    .container { width: 100%; }
+    [style*="min-width: 350px"],
+    [style*="min-width: 300px"] {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 2rem !important;
+    }
+    [style*="grid-template-columns: 1fr 1fr"] > .reveal:last-child {
+        padding: 1.5rem !important;
+    }
+    .hero { min-height: 100svh; height: auto; padding: 4rem 1.25rem; }
+    .hero-text h1 { font-size: 2.35rem; }
+    .hero-text p { font-size: 1rem; }
+    .hero-badges { flex-wrap: wrap; }
+    .btn { max-width: 100%; white-space: normal; text-align: center; }
+    .service-card { width: 100%; }
+    .service-card img,
+    .service-card:nth-child(1) img { height: 220px; }
+    img { max-width: 100%; height: auto; }
+    .footer-logo { width: 150px; }
+    .map-frame { height: 320px; border-radius: 12px; }
+    .map-actions .btn { width: 100%; }
 }
