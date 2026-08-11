@@ -109,20 +109,5 @@ Please let me know the quote and availability.`;
         });
     }
 
-    // 6. Mobile Dropdown Toggle
-    const dropdownWrapper = document.querySelector('.dropdown-wrapper > a');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
-    if (dropdownWrapper && dropdownMenu && window.innerWidth <= 992) {
-        if (!dropdownMenu.querySelector('a[href="services.html"]')) {
-            const allServicesLink = document.createElement('a');
-            allServicesLink.href = 'services.html';
-            allServicesLink.textContent = 'All Services';
-            dropdownMenu.prepend(allServicesLink);
-        }
-        dropdownWrapper.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdownMenu.classList.toggle('active');
-            dropdownWrapper.setAttribute('aria-expanded', dropdownMenu.classList.contains('active'));
-        });
-    }
+    // The complete services submenu remains visible inside the opened mobile navigation.
 });

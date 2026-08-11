@@ -672,7 +672,7 @@ footer {
         position: static;
         width: 100%;
         min-width: 0;
-        display: none;
+        display: flex;
         opacity: 1;
         visibility: visible;
         transform: none;
