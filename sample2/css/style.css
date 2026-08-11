@@ -48,11 +48,9 @@ header {
 }
 
 .logo img {
-    max-width: 180px;
-    margin-bottom: 3rem;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
+    max-width: 130px;
+    margin-bottom: 2rem;
+    filter: brightness(0) invert(1);
 }
 
 .nav-links {
