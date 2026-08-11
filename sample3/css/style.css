@@ -86,28 +86,42 @@ header {
 
 .nav-container {
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 240px minmax(0, 1fr);
     align-items: center;
     min-height: 78px;
     position: relative;
 }
 
 .logo {
-    display: block;
-    width: 178px;
-    height: 64px;
-    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    width: auto;
+    height: 56px;
+    padding: 0.35rem 0.8rem 0.35rem 0.4rem;
     border-radius: 14px;
-    background: #fff;
+    background: rgba(255,255,255,0.96);
+    color: #7d0f2d;
+    text-decoration: none;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform: scale(1.42);
-    transform-origin: center 57%;
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 9px;
+    transform: none;
     filter: none;
+}
+
+.logo::after {
+    content: 'RAK MOVERS & PACKERS';
+    font-size: 0.82rem;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -321,6 +335,13 @@ header {
     align-items: center;
     justify-content: center;
     gap: 0.55rem;
+}
+
+.hero-actions .btn-outline {
+    background: rgba(10, 25, 32, 0.86) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.8) !important;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
 }
 
 .badge {
@@ -551,10 +572,11 @@ footer {
         min-height: 68px;
     }
     .logo {
-        width: 138px;
-        height: 52px;
+        height: 50px;
+        padding-right: 0.65rem;
     }
-    .logo img { transform: scale(1.22); }
+    .logo img { width: 40px; height: 40px; transform: none; }
+    .logo::after { font-size: 0.7rem; }
     .nav-links {
         display: none;
         position: absolute;
