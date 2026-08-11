@@ -47,10 +47,17 @@ header {
     display: none; /* Hide old top bar in this layout */
 }
 
+.logo {
+    display: block;
+    width: 220px;
+    margin-bottom: 1rem;
+}
+
 .logo img {
-    max-width: 130px;
-    margin-bottom: 2rem;
-    filter: brightness(0) invert(1);
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: none;
 }
 
 .nav-links {
@@ -246,6 +253,14 @@ input:focus, select:focus, textarea:focus {
     margin: 0 auto;
 }
 
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    margin: 0.5rem 0 1rem;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -296,13 +311,24 @@ input:focus, select:focus, textarea:focus {
 .service-card:nth-child(2) { grid-column: span 6; }
 .service-card:nth-child(3) { grid-column: span 6; }
 
-.service-card:nth-child(1) img { height: 350px; }
+.service-card:nth-child(1) img {
+    height: 350px;
+    object-fit: cover;
+    object-position: center 45%;
+}
 
 /* FOOTER */
 footer {
     background: var(--bg-surface);
     padding: 4rem 4rem 2rem;
     border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-logo {
+    display: block;
+    width: 170px;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 .footer-grid {
