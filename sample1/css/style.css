@@ -592,12 +592,31 @@ footer {
 }
 @media (max-width: 768px) {
     html, body { width: 100%; max-width: 100%; overflow-x: clip; }
-    .section { padding: 4rem 1.25rem; }
+    .section { padding: 3.5rem 1.25rem; }
     .container { width: 100%; }
+    body > div[style*="padding: 150px"] {
+        padding: 125px 1.25rem 38px !important;
+    }
+    body > div[style*="padding: 150px"] h1 {
+        max-width: 19ch;
+        margin: 0 auto 0.75rem;
+        font-size: clamp(1.9rem, 9vw, 2.35rem);
+        line-height: 1.15;
+    }
     [style*="min-width: 350px"],
     [style*="min-width: 300px"] {
         min-width: 0 !important;
         width: 100% !important;
+    }
+    [style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+    }
+    [style*="display: flex"][style*="flex-wrap: wrap"] > [style*="flex: 1"] {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     [style*="grid-template-columns: 1fr 1fr"] {
         grid-template-columns: minmax(0, 1fr) !important;
@@ -613,8 +632,21 @@ footer {
     .hero-badges { align-items: stretch; }
     .hero-badges .badge { justify-content: center; text-align: center; }
     .btn { max-width: 100%; white-space: normal; text-align: center; }
+    .grid-3,
+    .about-service-grid,
+    .process-grid { grid-template-columns: minmax(0, 1fr) !important; }
     .service-card { width: 100%; }
     .service-img { height: 220px; }
+    .section-light .reveal > img,
+    .section-light [style*="flex: 1"] > img {
+        display: block;
+        width: 100% !important;
+        max-height: 260px;
+        object-fit: cover;
+    }
+    .section-light h2 { font-size: 1.75rem; line-height: 1.2; }
+    .section-light p { font-size: 1rem !important; line-height: 1.7; }
+    .section-light .btn { width: 100%; }
     img { max-width: 100%; height: auto; }
     .footer-logo { width: 150px; height: auto; }
     .floating-actions { right: 14px; bottom: 18px; }
