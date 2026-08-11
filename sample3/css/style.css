@@ -676,7 +676,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .floating-actions { display: none; }
+    .floating-actions { display: flex; }
     .top-bar {
         display: flex;
         position: absolute;
@@ -695,6 +695,18 @@ footer {
     header { top: 42px; }
     .section { padding: 4rem 1.25rem; }
     .container { width: 100%; }
+    .logo { width: 52px; min-width: 52px; padding: 0.3rem; }
+    .logo::after { display: none; }
+    [style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+    }
+    [style*="display: flex"][style*="flex-wrap: wrap"] > [style*="flex: 1"] {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
     [style*="min-width: 350px"],
     [style*="min-width: 300px"] {
         min-width: 0 !important;
@@ -728,4 +740,13 @@ footer {
     .quote-form-card > h3 { font-size: 1.55rem !important; }
     .quote-form-card > p { margin-bottom: 1.5rem !important; }
     #whatsapp-form .btn { padding: 1rem !important; font-size: 1rem !important; }
+    .section-light [style*="flex: 1"] > img {
+        display: block;
+        width: 100% !important;
+        max-height: 260px;
+        object-fit: cover;
+    }
+    .section-light h2 { font-size: 1.7rem; line-height: 1.2; }
+    .section-light p { font-size: 1rem !important; line-height: 1.7; }
+    .section-light .btn { width: 100%; }
 }
