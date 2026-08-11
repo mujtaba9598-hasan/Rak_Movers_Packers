@@ -109,13 +109,13 @@ Please let me know the quote and availability.`;
         });
     }
 
-    // 6. Mobile Mega Menu Toggle
-    const megaMenuWrapper = document.querySelector('.mega-menu-wrapper > a');
-    const megaMenu = document.querySelector('.mega-menu');
-    if (megaMenuWrapper && megaMenu && window.innerWidth <= 992) {
-        megaMenuWrapper.addEventListener('click', (e) => {
+    // 6. Mobile Dropdown Toggle
+    const dropdownWrapper = document.querySelector('.dropdown-wrapper > a');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownWrapper && dropdownMenu && window.innerWidth <= 992) {
+        dropdownWrapper.addEventListener('click', (e) => {
             e.preventDefault();
-            megaMenu.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
         });
     }
 });
