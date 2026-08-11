@@ -50,7 +50,9 @@ header {
 .logo img {
     max-width: 180px;
     margin-bottom: 3rem;
-    filter: brightness(0) invert(1); /* Make logo white */
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .nav-links {
@@ -210,6 +212,26 @@ main {
 
 .btn-outline:hover {
     background: rgba(255, 179, 0, 0.1);
+}
+
+/* Form Elements */
+input, select, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-dark);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 
 /* --- ASYMMETRICAL SERVICES GRID --- */
